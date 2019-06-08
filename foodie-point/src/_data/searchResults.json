@@ -1,0 +1,21 @@
+{
+  "restaurants": [
+    {
+      "id": "16718128",
+      "name": "Pink Door",
+      "url": "https://www.zomato.com/seattle/pink-door-downtown?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+      "location": {
+        "address": "Pike Place Market, 1919 Post Alley, Seattle 98101"
+      },
+      "cuisines": "Italian",
+      "average_cost_for_two": 100,
+      "thumb": "https://b.zmtcdn.com/data/res_imagery/16718128_RESTAURANT_50bfc6f5464b1ff9b575c9b92da1106d_c.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+      "user_rating": {
+        "aggregate_rating": "4.9",
+        "rating_text": "Excellent",
+        "rating_color": "3F7E00",
+        "votes": "1637"
+      }
+    }
+  ]
+}

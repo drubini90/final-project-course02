@@ -1,0 +1,46 @@
+{
+  "locations": [
+    {
+      "location": "Select a City",
+      "value": "noCitySelected",
+      "entity_id": 0,
+      "entity_type": "",
+      "city_id": 0
+    },
+    {
+      "location": "Seattle",
+      "value": "seattle",
+      "entity_id": 279,
+      "entity_type": "city",
+      "city_id": 279
+    },
+    {
+      "location": "Bellevue",
+      "value": "bellevue",
+      "entity_id": 10659,
+      "entity_type": "city",
+      "city_id": 10659
+    },
+    {
+      "location": "Olympia",
+      "value": "olympia",
+      "entity_id": 1249,
+      "entity_type": "city",
+      "city_id": 1249
+    },
+    {
+      "location": "Spokane",
+      "value": "spokane",
+      "entity_id": 1240,
+      "entity_type": "city",
+      "city_id": 1240
+    },
+    {
+      "location": "Vancouver",
+      "value": "vancouver",
+      "entity_id": 10650,
+      "entity_type": "city",
+      "city_id": 10650
+    }
+  ]
+}
