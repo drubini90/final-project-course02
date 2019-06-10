@@ -7,7 +7,7 @@ class Header extends Component {
   render() {
     return (
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             alt="myLogo"
             src={home_logo}
@@ -16,13 +16,13 @@ class Header extends Component {
             className="d-inline-block align-top"
           />
           {" FOODIE POINT"}
-          <img
+          {/* <img
             alt="wishList"
             src={wishList}
             width="45"
             height="45"
             className="d-inline-block align-right"
-          />
+          /> */}
         </Navbar.Brand>
       </Navbar>
     );

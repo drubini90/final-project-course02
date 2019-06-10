@@ -7,20 +7,13 @@ import MenuList from "./MenuList";
 import { Link } from "react-router-dom";
 
 class Restaurant extends React.Component {
-  // componentWillMount() {
-  //   const { onGetMenu } = this.props;
-  //   onGetMenu();
-  // }
   componentDidMount() {
-    // const { onGetMenu } = this.props;
     this.props.onGetMenu("test");
   }
+
   render() {
     const { restaurant, menuList } = this.props;
     const cuisine = "Default";
-    console.log(restaurant.name);
-    console.log(restaurant.location);
-
     return (
       <React.Fragment>
         <Row>
@@ -47,7 +40,7 @@ class Restaurant extends React.Component {
               Component={MenuList}
               className="creature"
             >
-              View Menu 1
+              View Menu
             </Link>
           </Col>
         </Row>
@@ -55,9 +48,11 @@ class Restaurant extends React.Component {
     );
   }
 }
+
 Restaurant.propTypes = {
   restaurant: PropTypes.object,
   onGetMenu: PropTypes.func,
   menuList: PropTypes.array
 };
+
 export default Restaurant;

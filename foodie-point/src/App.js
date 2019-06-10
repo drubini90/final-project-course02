@@ -5,9 +5,6 @@ import Cities from "./components/Cities";
 import Restaurants from "./components/Restaurants";
 import cityList from "./_data/locations.json";
 import menuCardData from "./_data/dailyMenu.json";
-import MenuList from "./components/MenuList";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Restaurant from "./components/Restaurant";
 
 class App extends React.Component {
   constructor(props) {
@@ -23,17 +20,7 @@ class App extends React.Component {
       hasError: false
     };
   }
-  // componentDidMount() {
-  //   fetch("./_data/dailyMenu.json")
-  //     .then(res => res.text())
-  //     .then(menuCard => {
-  //       console.log(menuCard);
-  //       this.setState({ menuCard });
-  //     });
-  //   // this.setState({
-  //   //   menuCard: menuCard.menu[0].items
-  //   // });
-  // }
+
   onSelectCity = event => {
     console.log(event);
     this.setState({
@@ -45,7 +32,7 @@ class App extends React.Component {
   sendGetRequest = uri => {
     const BASE_URL = "https://developers.zomato.com/api/v2.1/";
     const url = `${BASE_URL}${uri}`;
-    const API_KEY = "2562a2e798a108aef589b6b3a6eac00f";
+    const API_KEY = "";
     return fetch(url, {
       method: "GET",
       headers: {
@@ -54,6 +41,7 @@ class App extends React.Component {
       }
     });
   };
+
   onGetRestaurants = () => {
     this.sendGetRequest(
       `search?entity_id=${
@@ -64,7 +52,6 @@ class App extends React.Component {
         return response.json();
       })
       .then(data => {
-        console.log(data);
         this.setState({
           restaurants: data.restaurants,
           isLoading: false
@@ -79,20 +66,13 @@ class App extends React.Component {
   };
 
   onGetMenu = cuisine => {
-    console.log(cityList);
-    console.log(menuCardData.menu[0].items);
     this.setState({
       menuList: this.state.menuCardData.menu[0].items
     });
   };
   render() {
     return (
-      <Router>
-        <Switch>
-          <Route path="/Restaurant" component={Restaurant} />
-          <Route path="/MenuList/:id" component={MenuList} />
-        </Switch>
-
+      <React.Fragment>
         <Header />
         <Cities
           places={cityList.locations}
@@ -105,7 +85,7 @@ class App extends React.Component {
           onGetMenu={this.onGetMenu}
           menuList={this.state.menuList}
         />
-      </Router>
+      </React.Fragment>
     );
   }
 }

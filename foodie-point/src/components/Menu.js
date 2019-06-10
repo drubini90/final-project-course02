@@ -21,16 +21,16 @@ class Menu extends Component {
           </Col>
           <Col>
             <h3>{menuItem.name}</h3>
-            <div>Description: {menuItem.description}</div>
+            {/* <div>{menuItem.description}</div> */}
           </Col>
           <Col>
-            <h2>Price: {menuItem.price}</h2>
+            <h4>Price: ${menuItem.price}</h4>
           </Col>
-          <Col>
+          {/* <Col>
             <button type="button" variant="outline-info">
               Add To Cart
             </button>
-          </Col>
+          </Col> */}
         </Row>
       </React.Fragment>
     );
