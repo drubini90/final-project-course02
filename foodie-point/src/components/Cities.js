@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
 class Cities extends React.Component {
   shouldComponentUpdate(nextProps) {
@@ -26,7 +26,7 @@ class Cities extends React.Component {
                 id="locationFinder"
               >
                 {places.map((place, id) => (
-                  <option key={id} value={place.value}>
+                  <option key={id} value={place.entity_id}>
                     {place.location}
                   </option>
                 ))}
@@ -47,9 +47,9 @@ class Cities extends React.Component {
   }
 }
 Cities.propTypes = {
-  places: propTypes.array,
-  onSelectCity: propTypes.func,
-  selectedCity: propTypes.string,
-  onGetRestaurants: propTypes.func
+  places: PropTypes.array,
+  onSelectCity: PropTypes.func,
+  selectedCity: PropTypes.string,
+  onGetRestaurants: PropTypes.func
 };
 export default Cities;

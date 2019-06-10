@@ -1,0 +1,158 @@
+{
+  "menu": [
+    {
+      "cuisine": "Default",
+      "id": 0,
+      "items": [
+        {
+          "name": "Combo-1",
+          "decription": "Chicken Soup and Salad",
+          "quantity": 1,
+          "price": 15,
+          "image": "Default/ChickenSoup.jpg"
+        },
+        {
+          "name": "Combo-2",
+          "decription": "Veggie Sandwich",
+          "quantity": 1,
+          "price": 13,
+          "image": "Default/VeggieSandwich.jpg"
+        },
+        {
+          "name": "Combo-3",
+          "decription": "Burger and Potato Fries",
+          "quantity": 1,
+          "price": 12,
+          "image": "Default/Burger.jpg"
+        },
+        {
+          "name": "Combo-4",
+          "decription": "Pizza and Diet Soda",
+          "quantity": 1,
+          "price": 18,
+          "image": "Default/Pizza.jpg"
+        }
+      ]
+    },
+    {
+      "cuisine": "Chinese",
+      "id": 1,
+      "items": [
+        {
+          "name": "Combo-1",
+          "decription": "Shrimp Fried Rice and Beef Meat Balls",
+          "quantity": 1,
+          "price": 16.99
+        },
+        {
+          "name": "Combo-2",
+          "decription": "Chicken Chow Mein and Deep Fried Spring Rolls",
+          "quantity": 1,
+          "price": 15.99
+        },
+        {
+          "name": "Combo-3",
+          "decription": "House Special Noodle Soup and Pan Fried Pot Stickers",
+          "quantity": 1,
+          "price": 14.99
+        },
+        {
+          "name": "Combo-4",
+          "decription": "EggPlant with Shrimp Stuffing and Wonton Soup",
+          "quantity": 1,
+          "price": 17.99
+        }
+      ]
+    },
+    {
+      "cuisine": "Italian",
+      "id": 2,
+      "items": [
+        {
+          "name": "Combo-1",
+          "decription": "Truffle Risotto",
+          "quantity": 1,
+          "price": 25
+        },
+        {
+          "name": "Combo-2",
+          "decription": "Bouillabaisse",
+          "quantity": 1,
+          "price": 28
+        },
+        {
+          "name": "Combo-3",
+          "decription": "Canard a l'orange",
+          "quantity": 1,
+          "price": 22
+        },
+        {
+          "name": "Combo-4",
+          "decription": "Italian Burger",
+          "quantity": 1,
+          "price": 18
+        }
+      ]
+    },
+    {
+      "cuisine": "American",
+      "id": 3,
+      "items": [
+        {
+          "name": "Combo-1",
+          "decription": "Roast Beef",
+          "quantity": 1,
+          "price": 15
+        },
+        {
+          "name": "Combo-2",
+          "decription": "Grilled Turkey Bacon Swiss",
+          "quantity": 1,
+          "price": 18
+        },
+        {
+          "name": "Combo-3",
+          "decription": "Chicken Fried Steak Sandwich",
+          "quantity": 1,
+          "price": 12
+        },
+        {
+          "name": "Combo-4",
+          "decription": "Reuben",
+          "quantity": 1,
+          "price": 16
+        }
+      ]
+    },
+    {
+      "cuisine": "Thai",
+      "id": 4,
+      "items": [
+        {
+          "name": "Combo-1",
+          "decription": "Siam Forest Salad",
+          "quantity": 1,
+          "price": 15
+        },
+        {
+          "name": "Combo-2",
+          "decription": "Broccoli Delight",
+          "quantity": 1,
+          "price": 13
+        },
+        {
+          "name": "Combo-3",
+          "decription": "Pineapple Curry",
+          "quantity": 1,
+          "price": 12
+        },
+        {
+          "name": "Combo-4",
+          "decription": "Chili Pepper Fried Rice",
+          "quantity": 1,
+          "price": 18
+        }
+      ]
+    }
+  ]
+}
