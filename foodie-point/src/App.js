@@ -11,7 +11,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       cart: {},
-      selectedCity: "noCitySelected",
+      selectedCity: 0,
       entityId: 0,
       restaurants: [],
       menuCardData: menuCardData,
@@ -24,34 +24,30 @@ class App extends React.Component {
   onSelectCity = event => {
     console.log(event);
     this.setState({
-      selectedCity: event.target.options[event.target.selectedIndex].text,
+      selectedCity: event.target.selectedIndex,
       entityId: event.target.value
     });
   };
 
-  sendGetRequest = uri => {
-    const BASE_URL = "https://developers.zomato.com/api/v2.1/";
-    const url = `${BASE_URL}${uri}`;
-    const API_KEY = "";
-    return fetch(url, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "user-key": `${API_KEY}`
-      }
-    });
-  };
+  // sendGetRequest = uri => {
+  //   const BASE_URL = "https://developers.zomato.com/api/v2.1/";
+  //   const url = `${BASE_URL}${uri}`;
+  //   return fetch(url, {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       "user-key": `${API_KEY}`
+  //     }
+  //   });
+  // };
 
   onGetRestaurants = () => {
-    this.sendGetRequest(
-      `search?entity_id=${
-        this.state.entityId
-      }&entity_type=city&count=5&sort=rating&order=desc`
-    )
+    fetch(`http://localhost:4000/restaurants?entity_id=${this.state.entityId}`)
       .then(response => {
         return response.json();
       })
       .then(data => {
+        console.log(data);
         this.setState({
           restaurants: data.restaurants,
           isLoading: false

@@ -36,7 +36,7 @@ class Cities extends React.Component {
               type="button"
               className="btn btn-primary"
               onClick={onGetRestaurants}
-              disabled={selectedCity === "noCitySelected"}
+              disabled={selectedCity === 0}
             >
               Get Restaurants
             </button>
@@ -49,7 +49,7 @@ class Cities extends React.Component {
 Cities.propTypes = {
   places: PropTypes.array,
   onSelectCity: PropTypes.func,
-  selectedCity: PropTypes.string,
+  selectedCity: PropTypes.number,
   onGetRestaurants: PropTypes.func
 };
 export default Cities;
