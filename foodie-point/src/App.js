@@ -22,7 +22,6 @@ class App extends React.Component {
   }
 
   onSelectCity = event => {
-    console.log(event);
     this.setState({
       selectedCity: event.target.selectedIndex,
       entityId: event.target.value
@@ -30,13 +29,14 @@ class App extends React.Component {
   };
 
   onGetRestaurants = () => {
-    const BASE_URL = process.env.BASE_URL;
-    fetch(`${BASE_URL}/restaurants?entity_id=${this.state.entityId}`)
+    const url = `https://restaurantsdemoapi.herokuapp.com/restaurants?entity_id=${
+      this.state.entityId
+    }`;
+    fetch(url)
       .then(response => {
         return response.json();
       })
       .then(data => {
-        console.log(data);
         this.setState({
           restaurants: data.restaurants,
           isLoading: false
