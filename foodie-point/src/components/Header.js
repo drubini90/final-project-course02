@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import home_logo from "../_images/home_logo.png";
-import wishList from "../_images/wishlist_logo.png";
 
 class Header extends Component {
   render() {

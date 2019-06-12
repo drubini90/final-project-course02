@@ -29,20 +29,9 @@ class App extends React.Component {
     });
   };
 
-  // sendGetRequest = uri => {
-  //   const BASE_URL = "https://developers.zomato.com/api/v2.1/";
-  //   const url = `${BASE_URL}${uri}`;
-  //   return fetch(url, {
-  //     method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       "user-key": `${API_KEY}`
-  //     }
-  //   });
-  // };
-
   onGetRestaurants = () => {
-    fetch(`http://localhost:4000/restaurants?entity_id=${this.state.entityId}`)
+    const BASE_URL = process.env.BASE_URL;
+    fetch(`${BASE_URL}/restaurants?entity_id=${this.state.entityId}`)
       .then(response => {
         return response.json();
       })
